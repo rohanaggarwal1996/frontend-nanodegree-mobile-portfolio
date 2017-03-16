@@ -347,7 +347,6 @@ var pizzaElementGenerator = function(i) {
 };
 var resizePizzas = function(size) {
   window.performance.mark("mark_start_resize");   // User Timing API function
-
   function changeSliderLabel(size) {
     var ab="#pizzaSize";
     switch(size) {
