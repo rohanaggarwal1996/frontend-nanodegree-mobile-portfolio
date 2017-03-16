@@ -421,8 +421,9 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
+  var sctop=document.body.scrollTop/1250;
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    var phase = Math.sin(sctop + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
   window.performance.mark("mark_end_frame");
